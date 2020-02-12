@@ -15,8 +15,12 @@ source $ZSH/oh-my-zsh.sh
 
 # Environment Variables 
 export LANG=en_US.UTF-8
-export EDITOR='nvim'
+export EDITOR="nvim"
+export BROWSER="firefox"
 
 # Personal Aliases
 alias vim="nvim"
 alias R="R --quiet"
+alias zshconfig="vim ~/.zshrc"
+alias termiteconfig="vim ~/.config/termite/config"
+alias qtileconfig="vim ~/.config/qtile/config.py"
