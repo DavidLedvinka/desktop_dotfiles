@@ -18,9 +18,13 @@ export LANG=en_US.UTF-8
 export EDITOR="nvim"
 export BROWSER="firefox"
 
-# Personal Aliases
+# Aliases 
 alias vim="nvim"
 alias R="R --quiet"
+
+# Config Shortcuts
 alias zshconfig="vim ~/.zshrc"
 alias termiteconfig="vim ~/.config/termite/config"
 alias qtileconfig="vim ~/.config/qtile/config.py"
+alias xinitconfig="vim ~/.xinitrc"
+alias vimconfig="vim ~/.config/nvim/init.vim"
