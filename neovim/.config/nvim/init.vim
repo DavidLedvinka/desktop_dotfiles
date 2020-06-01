@@ -1,10 +1,21 @@
-"" David Ledvinka's nvim configuration file
+" ============================================================================= 
+" DAVID LEDVINKAS neovim configuration
+" =============================================================================
 
-"" PLUGINS 
+
+
+" -----------------------------------------------------------------------------
+" PLUGINS
+" -----------------------------------------------------------------------------
+
 call plug#begin('~/.local/share/nvim/plugged')
 
 " colorschemes
 Plug 'dracula/vim',{'as':'dracula'}
+Plug 'kyoz/purify', {'rtp': 'vim'}
+
+" autocompletion
+Plug 'Valloric/YouCompleteMe'
 
 " status bar
 Plug 'vim-airline/vim-airline' | Plug 'vim-airline/vim-airline-themes' 
@@ -12,17 +23,43 @@ Plug 'vim-airline/vim-airline' | Plug 'vim-airline/vim-airline-themes'
 " git
 Plug 'tpope/vim-fugitive'
 
+" zsh syntax highlighting
+Plug 'zsh-users/zsh-syntax-highlighting'
+
 call plug#end()
 
-"" AESTHETICS
+
+
+"------------------------------------------------------------------------------
+" AESTHETICS
+"------------------------------------------------------------------------------
+
 let g:airline_powerline_fonts = 1
 set termguicolors
+syntax on
 colorscheme dracula
 
-"" SETTINGS
 
-" leader key
-let mapleader = ","
+
+"------------------------------------------------------------------------------
+" GLOBAL SETTINGS
+"------------------------------------------------------------------------------
+
+" Set map 
+" undo settings
+set noswapfile
+set undofile
+set undodir=~/.vim/undo " you have to make this file
+
+" miscellaneous
+set visualbell
+set hidden
+
+
+
+"------------------------------------------------------------------------------
+" DEFAULT SETTINGS
+"------------------------------------------------------------------------------
 
 " cursor settings
 set backspace=indent,eol,start
@@ -44,9 +81,9 @@ set expandtab
 set smarttab
 
 " wrap settings
-set wrap
-set textwidth=80
-set noshiftround
+au Filetype * set formatoptions=tcq
+set wrapmargin=0
+set textwidth=79
 
 " search settings
 set hlsearch
@@ -56,10 +93,7 @@ set smartcase
 nnoremap <esc> :noh<return><esc>
 
 " fold settings
-set foldmethod=indent
-set foldnestmax=10
-set foldlevel=2
-nnoremap <space> za
+set nofoldenable
 
 " status bar settings
 set ruler
@@ -67,14 +101,17 @@ set showcmd
 set showmode
 set laststatus=2
 
-" undo settings
-set noswapfile
-set undofile
-set undodir=~/.vim/undo " you have to make this file
-
 " show matching brackets
 set showmatch
 
-" miscellaneous
-set visualbell
-set hidden
+
+
+"------------------------------------------------------------------------------
+" FILETYPE SETTINGS
+"------------------------------------------------------------------------------
+
+" tex settings
+let g:tex_flavor = "latex"
+
+
+

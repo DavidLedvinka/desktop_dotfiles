@@ -1,6 +1,6 @@
 [options]
 
-font = Monospace 9
+font = Source Code Pro 9.5
 scrollback_lines = 10000
 clickable_url = true
 

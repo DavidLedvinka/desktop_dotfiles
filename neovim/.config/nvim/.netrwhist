@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =5
+let g:netrw_dirhist_5='/home/dledvinka/work/mc_summer_project/writeup/sections'
+let g:netrw_dirhist_4='/home/dledvinka/side_projects/latex_workflow/course_notes_template/sections'
+let g:netrw_dirhist_3='/home/dledvinka/side_projects/latex_workflow/course_notes_template'
+let g:netrw_dirhist_2='/home/dledvinka/side_projects/latex_workflow/scripts'
+let g:netrw_dirhist_1='/home/dledvinka/.bin'
+let g:netrw_dirhist_0='/home/dledvinka/side_projects/latex_workflow/scripts'
+let g:netrw_dirhist_9='/home/dledvinka/.bin'
+let g:netrw_dirhist_8='/home/dledvinka/side_projects/latex_workflow/.git'
+let g:netrw_dirhist_7='/home/dledvinka/side_projects/latex_workflow/course_notes_template/sections'
+let g:netrw_dirhist_6='/home/dledvinka/work/mc_summer_project/writeup/tex'
